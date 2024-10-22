@@ -437,3 +437,10 @@
     }
 
 }
+
+@media (max-width: 768px) {
+
+    #pop-window {
+        display: none !important;
+    }
+}

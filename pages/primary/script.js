@@ -52,6 +52,11 @@ function initializePage() {
 
 
 function triggerSecondaryFlowStart(){
+    if (window.innerWidth < 768) {
+        document.getElementById('primary').classList.add('hidden'); // Hide the primary element
+    }
+
+
     // Function to be called to let secondary know the start action is triggered.
     document.dispatchEvent(new CustomEvent('secondaryFlowStart', {bubbles: true, composed: true}));
 }

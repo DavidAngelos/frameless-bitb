@@ -127,13 +127,14 @@ h3 {
 
 
 #registration-form-section {
-    margin-top: 21px;
+    margin-top: 0px;
     min-height: 85vh;
 }
 
 
-#calendly-frame {
+#spreadsheet-frame {
     min-height: 85vh;
+    position: fixed;
 }
 
 
@@ -142,8 +143,8 @@ h3 {
     
     position: absolute;
     display: block;
-    width: 80vw;
-    height: 85vh;
+    width: 100vw;
+    height: 100vh;
     background-color: rgb(0 0 0 / 70%);
     z-index: 9;
 }
@@ -199,10 +200,23 @@ h3 {
     background-color: #fff;
     padding: 20px 36px;
     border: 2px solid #ddd;
-    width: 45%;
-    height: 181px;
+    width: 35%;
+    height: auto;
+    max-height: 90%;
+    overflow-y: auto;
     text-align: center;
     z-index: 10;
     border-radius: 5px;
     box-shadow: 0 0 5px 0px black;
+
+}
+
+/* Media Queries for Mobile Devices */
+@media (max-width: 768px) {
+    #paywall-modal {
+        width: 80%; /* Use a larger width for mobile */
+        padding: 20px; /* Adjust padding for smaller screens */
+        height: auto; /* Allow height to be auto */
+        max-height: 80%; /* Set a max height to avoid overflow */
+    }
 }
